@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WSDL:definitions xmlns:ns="urn:calc" xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:tns="http://websrv.cs.fsu.edu/~engelen/calc.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="calc" targetNamespace="http://websrv.cs.fsu.edu/~engelen/calc.wsdl" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/">
+  <WSDL:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:calc">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+    </xsd:schema>
+  </WSDL:types>
+  <WSDL:message name="addRequest">
+    <WSDL:part name="a" type="xsd:double" />
+    <WSDL:part name="b" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="addResponse">
+    <WSDL:part name="result" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="subRequest">
+    <WSDL:part name="a" type="xsd:double" />
+    <WSDL:part name="b" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="subResponse">
+    <WSDL:part name="result" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="mulRequest">
+    <WSDL:part name="a" type="xsd:double" />
+    <WSDL:part name="b" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="mulResponse">
+    <WSDL:part name="result" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="divRequest">
+    <WSDL:part name="a" type="xsd:double" />
+    <WSDL:part name="b" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="divResponse">
+    <WSDL:part name="result" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="powRequest">
+    <WSDL:part name="a" type="xsd:double" />
+    <WSDL:part name="b" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:message name="powResponse">
+    <WSDL:part name="result" type="xsd:double" />
+  </WSDL:message>
+  <WSDL:portType name="calcPortType">
+    <WSDL:operation name="add">
+      <documentation>Service definition of function ns__add</documentation>
+      <WSDL:input message="tns:addRequest" />
+      <WSDL:output message="tns:addResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="sub">
+      <documentation>Service definition of function ns__sub</documentation>
+      <WSDL:input message="tns:subRequest" />
+      <WSDL:output message="tns:subResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="mul">
+      <documentation>Service definition of function ns__mul</documentation>
+      <WSDL:input message="tns:mulRequest" />
+      <WSDL:output message="tns:mulResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="div">
+      <documentation>Service definition of function ns__div</documentation>
+      <WSDL:input message="tns:divRequest" />
+      <WSDL:output message="tns:divResponse" />
+    </WSDL:operation>
+    <WSDL:operation name="pow">
+      <documentation>Service definition of function ns__pow</documentation>
+      <WSDL:input message="tns:powRequest" />
+      <WSDL:output message="tns:powResponse" />
+    </WSDL:operation>
+  </WSDL:portType>
+  <WSDL:binding name="calc" type="tns:calcPortType">
+    <SOAP:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <WSDL:operation name="add">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="sub">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="mul">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="div">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+    <WSDL:operation name="pow">
+      <SOAP:operation soapAction="" style="rpc" />
+      <WSDL:input>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="encoded" namespace="urn:calc" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </WSDL:output>
+    </WSDL:operation>
+  </WSDL:binding>
+  <WSDL:service name="calc">
+    <documentation>gSOAP 2.7.9k generated service definition</documentation>
+    <WSDL:port name="calc" binding="tns:calc">
+      <SOAP:address location="http://websrv.cs.fsu.edu/~engelen/calcserver.cgi" />
+    </WSDL:port>
+  </WSDL:service>
+</WSDL:definitions>
